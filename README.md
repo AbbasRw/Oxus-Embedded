@@ -1,2 +1,2 @@
 Oxus-Embedded
- Embedded Systems Journey
+Embedded Systems Journey
