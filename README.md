@@ -1,2 +1,2 @@
-# https://github.com/AbbasRw/Oxus-Embedded.git
- Embedded Systems Journey
+Oxus-Embedded:
+Embedded Systems Journey
