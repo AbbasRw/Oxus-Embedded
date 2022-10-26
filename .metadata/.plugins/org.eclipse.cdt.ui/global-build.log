@@ -1,24 +1,28 @@
-22:41:46 **** Incremental Build of configuration Debug for project 1.TogglingOnBoardLed ****
+23:41:33 **** Incremental Build of configuration Debug for project 2.TogglingOnBoardLedByOnBoardSwitch ****
 make -j4 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "1.TogglingOnBoardLed.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Oxus_Embedded\https---github.com-AbbasRw-Oxus-Embedded.git\1.TogglingOnBoardLed\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1.TogglingOnBoardLed.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 1.TogglingOnBoardLed.elf
+../Src/main.c: In function 'main':
+../Src/main.c:11:11: warning: unused variable 'pGPIOABSRRPinSet' [-Wunused-variable]
+   11 | uint32_t *pGPIOABSRRPinSet= (uint32_t*)0x40020018;
+      |           ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "2.TogglingOnBoardLedByOnBoardSwitch.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Oxus_Embedded\https---github.com-AbbasRw-Oxus-Embedded.git\2.TogglingOnBoardLedByOnBoardSwitch\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2.TogglingOnBoardLedByOnBoardSwitch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2.TogglingOnBoardLedByOnBoardSwitch.elf
  
-arm-none-eabi-objdump -h -S  1.TogglingOnBoardLed.elf  > "1.TogglingOnBoardLed.list"
-arm-none-eabi-objcopy  -O binary  1.TogglingOnBoardLed.elf  "1.TogglingOnBoardLed.bin"
-arm-none-eabi-size   1.TogglingOnBoardLed.elf 
+arm-none-eabi-objdump -h -S  2.TogglingOnBoardLedByOnBoardSwitch.elf  > "2.TogglingOnBoardLedByOnBoardSwitch.list"
+arm-none-eabi-objcopy  -O binary  2.TogglingOnBoardLedByOnBoardSwitch.elf  "2.TogglingOnBoardLedByOnBoardSwitch.bin"
+arm-none-eabi-size   2.TogglingOnBoardLedByOnBoardSwitch.elf 
    text	   data	    bss	    dec	    hex	filename
-    804	      8	   1568	   2380	    94c	1.TogglingOnBoardLed.elf
+    824	      8	   1568	   2400	    960	2.TogglingOnBoardLedByOnBoardSwitch.elf
 Finished building: default.size.stdout
  
-Finished building: 1.TogglingOnBoardLed.list
-Finished building: 1.TogglingOnBoardLed.bin
+Finished building: 2.TogglingOnBoardLedByOnBoardSwitch.list
+Finished building: 2.TogglingOnBoardLedByOnBoardSwitch.bin
  
  
-22:41:58 **** Incremental Build of configuration Debug for project 1.TogglingOnBoardLed ****
+23:41:41 **** Incremental Build of configuration Debug for project 2.TogglingOnBoardLedByOnBoardSwitch ****
 make -j4 all 
-arm-none-eabi-size   1.TogglingOnBoardLed.elf 
+arm-none-eabi-size   2.TogglingOnBoardLedByOnBoardSwitch.elf 
    text	   data	    bss	    dec	    hex	filename
-    804	      8	   1568	   2380	    94c	1.TogglingOnBoardLed.elf
+    824	      8	   1568	   2400	    960	2.TogglingOnBoardLedByOnBoardSwitch.elf
 Finished building: default.size.stdout
  

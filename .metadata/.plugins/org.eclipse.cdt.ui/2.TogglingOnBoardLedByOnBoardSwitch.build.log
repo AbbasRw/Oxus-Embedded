@@ -1,0 +1,10 @@
+23:41:41 **** Incremental Build of configuration Debug for project 2.TogglingOnBoardLedByOnBoardSwitch ****
+make -j4 all 
+arm-none-eabi-size   2.TogglingOnBoardLedByOnBoardSwitch.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	      8	   1568	   2400	    960	2.TogglingOnBoardLedByOnBoardSwitch.elf
+Finished building: default.size.stdout
+ 
+
+23:41:41 Build Finished. 0 errors, 0 warnings. (took 283ms)
+

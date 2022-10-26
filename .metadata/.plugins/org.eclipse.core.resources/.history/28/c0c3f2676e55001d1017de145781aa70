@@ -1,0 +1,45 @@
+#include <stdint.h>
+
+int main(void)
+{
+
+uint32_t *pRCCAHB1clockEN = (uint32_t*)0x40023830;
+uint32_t *pGPIODPortMode  = (uint32_t*)0x40020C00;
+uint32_t *pGPIODODRPinSet = (uint32_t*)0x40020C14;
+uint32_t *pGPIOAPortMode  = (uint32_t*)0x40020000;
+uint32_t *pGPIOAIDRPinSet = (uint32_t*)0x40020010;
+uint32_t *pGPIOABSRRPinSet= (uint32_t*)0x40020018;
+
+//1.Set pRCCAHB1clockEN
+
+*pRCCAHB1clockEN|=0x08;
+*pRCCAHB1clockEN|=0x01;
+
+//2.GPIOD Mode
+
+//2.1. Reset First
+*pGPIODPortMode &=0xFCFFFFFF;
+
+//2.2. Set Mode to Output
+*pGPIODPortMode |=0x01000000;
+
+//3. Reset and at the same time,it is Input mode
+*pGPIOAPortMode &=0xFFFFFFFC;
+
+
+//4.*pGPIODODRPinSet|=0x1000;
+//*pGPIOAIDRPinSet&=~0x000000;
+
+
+while(1){
+
+	if(*pGPIOAIDRPinSet & 0x01)
+	//*pGPIODODRPinSet|=0x1000;
+	*pGPIOABSRRPinSet|=0x00000001;
+
+	else
+	//*pGPIODODRPinSet&=~0x1000;
+	*pGPIOABSRRPinSet|=0x00010000;
+
+}
+}

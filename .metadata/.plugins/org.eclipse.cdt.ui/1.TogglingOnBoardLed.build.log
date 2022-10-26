@@ -1,4 +1,4 @@
-22:41:58 **** Incremental Build of configuration Debug for project 1.TogglingOnBoardLed ****
+22:46:03 **** Incremental Build of configuration Debug for project 1.TogglingOnBoardLed ****
 make -j4 all 
 arm-none-eabi-size   1.TogglingOnBoardLed.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   1.TogglingOnBoardLed.elf
 Finished building: default.size.stdout
  
 
-22:41:59 Build Finished. 0 errors, 0 warnings. (took 320ms)
+22:46:03 Build Finished. 0 errors, 0 warnings. (took 410ms)
 
